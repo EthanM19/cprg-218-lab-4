@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles/reset.css">
+  <link rel="stylesheet" type="text/css" href="styles/fonts.css">
+  <link rel="stylesheet" type="text/css" href="styles/global.css">
+  <link rel="stylesheet" type="text/css" href="styles/lab_four_starter.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+  <title>My Fitness Page</title>
+</head>
+<body>
+  <section class="hero-container">
+    <div class="hero-image">
+      <img src="assets/training.jpg" alt="Trainer">
+    </div>
+    <div class="hero-text">
+      <h1>I am Ethan Moroz</h1>
+      <p>And I'm a Personal Trainer</p>
+    </div>
+  </section>
+
+  <h2>Content Section</h2>
+  <section id="content" class="container content-container">
+    <div class="image-wrapper">
+      <img src="assets/Gym.jpg" alt="gym photo">
+    </div>
+    <div class="text-content">
+      <p>Our gym stands as a beacon of fitness excellence, embodying a holistic approach to health and well-being. From state-of-the-art equipment to expert trainers, every aspect is finely tuned to empower members on their fitness journey. Our facility boasts a diverse range of workout options, catering to all fitness levels and preferences, whether it's high-intensity interval training, strength training, or calming yoga sessions. The supportive community fosters motivation and camaraderie, ensuring everyone feels welcomed and encouraged..</p>
+      <button>Read More</button>
+    </div>
+  </section>
+
+  <h2>Workout Plans</h2>
+  <section id="workout-plans" class="container accordion-container">
+    <button class="accordion">Plan 1</button>
+    <div class="panel">
+      <p>Basic Plan:
+        Our Basic Plan offers access to our gym facilities, including a range of basic cardio equipment and a dedicated weightlifting area. Members also have access to locker rooms for their convenience. This plan is perfect for individuals looking for a simple yet effective workout routine. The Basic Plan is available at an affordable price of $30 per month.</p>
+    </div>
+    <button class="accordion">Plan 2</button>
+    <div class="panel">
+      <p>Premium Plan:
+        Upgrade to our Premium Plan for an enhanced fitness experience. In addition to all the features of the Basic Plan, members enjoy access to a variety of group fitness classes such as yoga, Zumba, and spin classes. They also receive personalized workout plans from our certified trainers and can relax in our sauna and steam rooms after their workouts. The Premium Plan is available for $50 per month.</p>
+    </div>
+    <button class="accordion">Plan 3</button>
+    <div class="panel">
+      <p>Ultimate Plan:
+        For the ultimate fitness experience, choose our Ultimate Plan. In addition to all the features of the Premium Plan, members receive exclusive access to one-on-one personal training sessions tailored to their fitness goals. They also benefit from nutrition consultation and personalized meal planning services. Our Ultimate Plan includes towel service and complimentary protein shakes to support members in achieving their fitness objectives. Experience the pinnacle of fitness with our Ultimate Plan, priced at $100 per month.</p>
+    </div>
+  </section>
+  
+  <section class="footer-container">
+    <footer>
+      <div class="footer-content">
+        <p>&copy; <span id="currentYear"></span> RAW Training </p>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#content">Content Section</a></li>
+          <li><a href="#workout-plans">Workout Plans</a></li>
+        </ul>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d250972.0088334765!2d-114.36857467092663!3d51.044733999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537170039f843fd5%3A0x266d3bb1b652b63a!2sCalgary%2C%20AB%2C%20Canada!5e0!3m2!1sen!2sus!4v1646752782259!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </footer>
+  </section>
+  <script>
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+</body>
+</html>
